@@ -22,16 +22,6 @@ subprojects {
         options.encoding = 'UTF-8'
     }
 
-    tasks.withType(Test).configureEach {
-        testLogging {
-            events = [TestLogEvent.PASSED, TestLogEvent.FAILED, TestLogEvent.SKIPPED]
-            exceptionFormat = TestExceptionFormat.FULL
-            showExceptions = true
-            showCauses = true
-            showStackTraces = true
-        }
-    }
-
     jar {
         from '../LICENSE.txt'
     }
